@@ -5,14 +5,13 @@ package DataDSMS
   */
 
 object Definitions {
-  val terms = System.getenv()
 
   def getMetaDataPath = "metadata.txt"
-  def getStoragePath = terms("DSMS_S_PATH")
-  def getArchivePath = terms("DSMS_A_PATH")
-  def getSecureKeyPath = terms("DSMS_SEC_KEY")
-  def getSettingKeyPath = terms("DSMS_SET_KEY")
-  def getIpAddr = terms("DSMS_IP_ADDR")
+  def getStoragePath = sys.env("DSMS_S_PATH")
+  def getArchivePath = sys.env("DSMS_A_PATH")
+  def getSecureKeyPath = sys.env("DSMS_SEC_KEY")
+  def getSettingKeyPath = sys.env("DSMS_SET_KEY")
+  def getIpAddr = sys.env("DSMS_IP_ADDR")
 
 /*
   def getStoragePath = "/home/beir/Desktop/storage/settrade/"
