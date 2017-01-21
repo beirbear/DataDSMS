@@ -11,6 +11,9 @@ object SecureKey {
     if (!DataDSMS.Services.General.isFileFolderExist(DataDSMS.Definitions.getSecureKeyPath))
       throw new Exception("Security key doesn't exist!")
 
+    if (input.isEmpty)
+      return false
+
     val tmp = General.valueHexOf(Files.readAllBytes(Paths.get(DataDSMS.Definitions.getSecureKeyPath)).toList)
 
     if (tmp == input) true else false
@@ -19,6 +22,9 @@ object SecureKey {
   def isSettingKeyValid(input: String): Boolean = {
     if (!DataDSMS.Services.General.isFileFolderExist(DataDSMS.Definitions.getSettingKeyPath))
       throw new Exception("Setting key doesn't exist!")
+
+    if (input.isEmpty)
+      return false
 
     val tmp = General.valueHexOf(Files.readAllBytes(Paths.get(DataDSMS.Definitions.getSettingKeyPath)).toList)
 
