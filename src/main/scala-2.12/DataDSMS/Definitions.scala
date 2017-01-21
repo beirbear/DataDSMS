@@ -9,8 +9,8 @@ object Definitions {
   def getMetaDataPath = "metadata.txt"
   def getStoragePath = sys.env("DSMS_S_PATH")
   def getArchivePath = sys.env("DSMS_A_PATH")
-  def getSecureKeyPath = sys.env("DSMS_SEC_KEY")
-  def getSettingKeyPath = sys.env("DSMS_SET_KEY")
+  def getSecureKeyPath = sys.env("DSMS_SEC_KEY_PATH")
+  def getSettingKeyPath = sys.env("DSMS_SET_KEY_PATH")
   def getIpAddr = sys.env("DSMS_IP_ADDR")
 
 /*
